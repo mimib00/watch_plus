@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "693999966425",
+    "project_id": "watchplus-55d71",
+    "storage_bucket": "watchplus-55d71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693999966425:android:8bbb1062f639ae7e1c86c8",
+        "android_client_info": {
+          "package_name": "com.shaderbytes.watchplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693999966425-52b6ofjqua8ja7lsmsukp6pb3hdjtqok.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shaderbytes.watchplus",
+            "certificate_hash": "a9d13c988b777db80eca900e65fd2a36271b6f2f"
+          }
+        },
+        {
+          "client_id": "693999966425-6jab9r6l7he57br4qqqha6m0il6idn6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUZdP10dyCySWQ_gejejBPYbMKAUfyYxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693999966425-6jab9r6l7he57br4qqqha6m0il6idn6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

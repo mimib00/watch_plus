@@ -13,6 +13,17 @@ class RootScreen extends GetView<NavigationController> {
         return Scaffold(
           appBar: AppBar(
             title: Image.asset("assets/logo.png", height: kToolbarHeight - 35),
+            actions: [
+              GestureDetector(
+                onTap: () {},
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Icon(
+                    Icons.chat_outlined,
+                  ),
+                ),
+              ),
+            ],
           ),
           body: controller.screen,
           bottomNavigationBar: BottomNavigationBar(

@@ -7,6 +7,14 @@ class AppTheme {
   static ThemeData dark = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: kScaffoldColor,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      elevation: 0,
+      selectedItemColor: kPrimaryColor,
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      selectedLabelStyle: GoogleFonts.inter(fontSize: 10.sp),
+      unselectedLabelStyle: GoogleFonts.inter(fontSize: 10.sp),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: kPrimaryColor,

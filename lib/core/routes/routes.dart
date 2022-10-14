@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:watch_plus/core/bindings.dart';
 import 'package:watch_plus/views/auth/complete_account.dart';

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:watch_plus/meta/utils/constants.dart';
 import 'package:watch_plus/meta/widgets/watch_input.dart';
 import 'package:watch_plus/views/auth/components/selectable_chip.dart';
 import 'package:watch_plus/views/auth/contoller/auth_controller.dart';

@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 import 'package:watch_plus/core/routes/routes.dart';
 import 'package:watch_plus/core/theme/app_theme.dart';
 import 'package:watch_plus/firebase_options.dart';
@@ -18,12 +19,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Watch+',
-      theme: AppTheme.dark,
-      debugShowCheckedModeBanner: false,
-      initialRoute: Routes.splash,
-      getPages: Routes.allRoutes,
+    return Sizer(
+      builder: (context, _, __) {
+        return GetMaterialApp(
+          title: 'Watch+',
+          theme: AppTheme.dark,
+          debugShowCheckedModeBanner: false,
+          initialRoute: Routes.splash,
+          getPages: Routes.allRoutes,
+        );
+      },
     );
   }
 }

@@ -126,7 +126,7 @@ class LoginScreen extends GetView<AuthController> {
                           style: Theme.of(context).textTheme.labelSmall,
                         ),
                         ElevatedButton.icon(
-                          onPressed: () {},
+                          onPressed: () => Get.offAllNamed(Routes.root),
                           icon: const Icon(Icons.arrow_forward_ios_rounded),
                           label: const Text("Login"),
                         ),

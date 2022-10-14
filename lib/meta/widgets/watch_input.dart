@@ -8,6 +8,8 @@ class WatchInput extends StatefulWidget {
   final bool? obscure;
   final String? Function(String? value)? validator;
   final TextInputType keybowrdType;
+  final Widget? prifix;
+  final Widget? suffix;
   const WatchInput({
     super.key,
     required this.controller,
@@ -16,6 +18,8 @@ class WatchInput extends StatefulWidget {
     this.obscure,
     this.icon,
     this.keybowrdType = TextInputType.text,
+    this.prifix,
+    this.suffix,
   });
 
   @override
@@ -50,7 +54,7 @@ class _WatchInputState extends State<WatchInput> {
                   widget.icon,
                   color: kPrimaryColor,
                 )
-              : null,
+              : widget.prifix,
           suffixIcon: widget.obscure != null
               ? GestureDetector(
                   onTap: () {
@@ -63,7 +67,7 @@ class _WatchInputState extends State<WatchInput> {
                     color: kPrimaryColor,
                   ),
                 )
-              : null,
+              : widget.suffix,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(color: kPrimaryColor),

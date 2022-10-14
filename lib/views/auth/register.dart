@@ -134,7 +134,7 @@ class RegisterScreen extends GetView<AuthController> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         ElevatedButton.icon(
-                          onPressed: () {},
+                          onPressed: () => Get.toNamed(Routes.completeRegister),
                           icon: const Icon(Icons.arrow_forward_ios_rounded),
                           label: const Text("Create"),
                         ),

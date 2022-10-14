@@ -18,6 +18,11 @@ class AppTheme {
         ),
       ),
     ),
+    appBarTheme: const AppBarTheme(
+      elevation: 0,
+      color: kScaffoldColor,
+      centerTitle: true,
+    ),
     textTheme: TextTheme(
       labelSmall: GoogleFonts.ubuntu(
         color: Colors.white,

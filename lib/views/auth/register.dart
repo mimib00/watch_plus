@@ -5,8 +5,8 @@ import 'package:watch_plus/meta/utils/constants.dart';
 import 'package:watch_plus/meta/widgets/watch_input.dart';
 import 'package:watch_plus/views/auth/contoller/auth_controller.dart';
 
-class LoginScreen extends GetView<AuthController> {
-  const LoginScreen({super.key});
+class RegisterScreen extends GetView<AuthController> {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,13 +76,13 @@ class LoginScreen extends GetView<AuthController> {
                     ),
                   ),
                   Text(
-                    "Welcome",
+                    "Create new account",
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleSmall,
                   ),
                   const SizedBox(height: 40),
                   Form(
-                    key: controller.loginForm,
+                    key: controller.registerForm,
                     child: Column(
                       children: [
                         WatchInput(
@@ -112,6 +112,18 @@ class LoginScreen extends GetView<AuthController> {
                             return null;
                           },
                         ),
+                        WatchInput(
+                          controller: controller.confirmPassword,
+                          hintText: "Re-Enter Password",
+                          obscure: true,
+                          keybowrdType: TextInputType.visiblePassword,
+                          icon: Icons.lock,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) return "Please enter a password confirmation";
+                            if (value != controller.password.text.trim()) return "Passwords Don't match";
+                            return null;
+                          },
+                        ),
                       ],
                     ),
                   ),
@@ -119,30 +131,26 @@ class LoginScreen extends GetView<AuthController> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
-                          "Forgot Password?",
-                          style: Theme.of(context).textTheme.labelSmall,
-                        ),
                         ElevatedButton.icon(
                           onPressed: () {},
                           icon: const Icon(Icons.arrow_forward_ios_rounded),
-                          label: const Text("Login"),
+                          label: const Text("Create"),
                         ),
                       ],
                     ),
                   ),
                   const SizedBox(height: 50),
                   Text(
-                    "Don't have an account?",
+                    "Already have an account?",
                     style: Theme.of(context).textTheme.labelSmall,
                   ),
                   const SizedBox(height: 10),
                   ElevatedButton.icon(
-                    onPressed: () => Get.offAndToNamed(Routes.register),
-                    icon: const Icon(Icons.person_add_alt_1_outlined),
-                    label: const Text("Create an account"),
+                    onPressed: () => Get.offAndToNamed(Routes.login),
+                    icon: const Icon(Icons.arrow_back_rounded),
+                    label: const Text("Login"),
                   ),
                 ],
               ),
